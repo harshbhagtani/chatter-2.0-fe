@@ -3,10 +3,10 @@ import React, { createContext, useContext, useEffect } from "react";
 import { useState } from "react";
 import { io } from "socket.io-client";
 import { authContext } from "../AuthProvider";
-import { BASE_SERVER } from "../../app/constants/config";
+
 export const socketContext = createContext({});
 
-const socket = io(BASE_SERVER);
+const socket = io("https://chatter-v8em.onrender.com");
 
 const SocketProvider = ({ children }: { children: React.ReactNode }) => {
   const { user, isAuthenticated } = useContext(authContext);
