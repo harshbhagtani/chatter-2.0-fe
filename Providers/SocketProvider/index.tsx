@@ -6,7 +6,7 @@ import { authContext } from "../AuthProvider";
 
 export const socketContext = createContext({});
 
-const socket = io("https://chatter-v8em.onrender.com");
+const socket = io("https://chatter-2-0-backend.onrender.com");
 
 const SocketProvider = ({ children }: { children: React.ReactNode }) => {
   const { user, isAuthenticated } = useContext(authContext);
